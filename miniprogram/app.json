@@ -1,6 +1,7 @@
 {
   "pages": [
-   "pages/index/index"
+   "pages/index/index",
+   "pages/delive/delive"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -10,6 +11,8 @@
     "navigationBarTextStyle": "white",
     "enablePullDownRefresh": true
   }
+ 
+  
 
 
 }

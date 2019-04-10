@@ -3,11 +3,14 @@
 	"cloudfunctionRoot": "cloudfunctions/",
 	"setting": {
 		"urlCheck": true,
-		"": true,
+		"es6": true,
 		"postcss": true,
 		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"": true,
 		"newFeatues6re": true,
-		"newFeature": true
+		"nodeModules": true
 	},
 	"appid": "wx2bbd23b18c0d725e",
 	"projectname": "delivery-demo1",
