@@ -13,3 +13,26 @@
 <view class="text-center margin-top">
   <text class="text-grey text-xl">{{motto}}</text>
 </view>
+<view>
+  <van-cell
+    title="发出的订单"
+    value=""
+    is-link
+    arrow-direction="down"
+    url=""
+  />
+  <van-cell
+    title="抢到的订单"
+    value=""
+    is-link
+    arrow-direction="down"
+    url=""
+  />
+   <van-cell
+    title="反馈"
+    value=""
+    is-link
+    arrow-direction="down"
+    url=""
+  />
+</view>
