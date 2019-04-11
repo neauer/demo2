@@ -12,7 +12,7 @@ Page({
     ],
 
     indicatordots: true,
-    autoplay: true,
+    autoplay: true  ,
     interval: 1000,
     duration: 1000,
     circular: true
