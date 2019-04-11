@@ -7,13 +7,13 @@
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
+		"nodeModules": true,
 		"autoAudits": false,
 		"": true,
-		"newFeatues6re": true,
-		"nodeModules": true
+		"newFeatues6re": true
 	},
 	"appid": "wx2bbd23b18c0d725e",
-	"projectname": "delivery-demo1",
+	"projectname": "demo2",
 	"libVersion": "2.6.5",
 	"condition": {
 		"search": {
@@ -37,8 +37,8 @@
 				{},
 				{
 					"id": -1,
-					"name": "demo1",
-					"pathName": "pages/delivery/delivery",
+					"name": "demo2",
+					"pathName": "pages/index/index",
 					"scene": null
 				}
 			]
