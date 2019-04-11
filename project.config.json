@@ -7,14 +7,14 @@
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
+		"nodeModules": true,
 		"autoAudits": false,
 		"": true,
-		"newFeatues6re": true,
-		"nodeModules": true
+		"newFeatues6re": true
 	},
 	"appid": "wx2bbd23b18c0d725e",
-	"projectname": "delivery-demo1",
-	"libVersion": "2.2.5",
+	"projectname": "demo2",
+	"libVersion": "2.6.5",
 	"condition": {
 		"search": {
 			"current": -1,
@@ -36,6 +36,8 @@
 			"list": [
 				{
 					"id": -1,
+					"name": "demo2",
+					"pathName": "pages/index/index",
 					"name": "demo1",
 					"pathName": "pages/delivery/delivery",
 					"query": "",
@@ -53,6 +55,7 @@
 					"name": "profile",
 					"pathName": "pages/index/index",
 					"query": "",
+
 					"scene": null
 				}
 			]
