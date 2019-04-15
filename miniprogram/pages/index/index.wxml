@@ -1,5 +1,5 @@
-
-<view class="margin-xl padding-xl bg-white radius shadow-lg">
+<view class="indexContainer">
+  <view class="margin-xl padding-xl bg-white radius shadow-lg">
   <view class="flex justify-center">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='cu-btn round bg-green shadow'> 获取头像昵称 </button>
     <block wx:else>
@@ -13,26 +13,10 @@
 <view class="text-center margin-top">
   <text class="text-grey text-xl">{{motto}}</text>
 </view>
-<view>
-  <van-cell
-    title="发出的订单"
-    value=""
-    is-link
-    arrow-direction="down"
-    url=""
-  />
-  <van-cell
-    title="抢到的订单"
-    value=""
-    is-link
-    arrow-direction="down"
-    url=""
-  />
-   <van-cell
-    title="反馈"
-    value=""
-    is-link
-    arrow-direction="down"
-    url=""
-  />
+<view class="userMenu">
+  <i-cell title="发出的订单" is-link url=""></i-cell>
+  <i-cell title="接到的订单" is-link url=""></i-cell>
+  <i-cell title="联系客服" is-link url=""></i-cell>
+</view>
+
 </view>
