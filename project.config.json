@@ -32,12 +32,10 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
-					"name": "demo2",
-					"pathName": "pages/index/index",
 					"name": "demo1",
 					"pathName": "pages/delivery/delivery",
 					"query": "",
@@ -55,7 +53,12 @@
 					"name": "profile",
 					"pathName": "pages/index/index",
 					"query": "",
-
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "delive",
+					"pathName": "pages/delive/delive",
 					"scene": null
 				}
 			]
