@@ -1,3 +1,4 @@
+<!-- 轮播图开始 -->
 <view>
 <swiper 
   indicator-dots='true'
@@ -16,3 +17,15 @@
 
 </swiper>
 </view>
+<!-- 轮播图结束 -->
+
+
+<!-- 分类选择器 -->
+<van-tree-select
+  items="{{ items }}"
+  main-active-index="{{ mainActiveIndex }}"
+  active-id="{{ activeId }}"
+  bind:click-nav="onClickNav"
+  bind:click-item="onClickItem"
+/>
+<!-- 分类选择器结束 -->
