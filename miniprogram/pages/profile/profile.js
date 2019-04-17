@@ -15,8 +15,18 @@ Page({
     autoplay: true,
     interval: 1000,
     duration: 1000,
-    circular: true
+    circular: true,
+  },
+  onClickNav({ detail = {} }) {
+    this.setData({
+      mainActiveIndex: detail.index || 0
+    });
+  },
 
+  onClickItem({ detail = {} }) {
+    this.setData({
+      activeId: detail.id
+    });
   },
 
   /**
