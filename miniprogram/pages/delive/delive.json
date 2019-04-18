@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-field": "../../miniprogram_npm/_vant-weapp@0.5.9@vant-weapp/field/index",
+    "van-submit-bar": "../../miniprogram_npm/_vant-weapp@0.5.9@vant-weapp/submit-bar/index",
+    "van-notice-bar": "../../miniprogram_npm/_vant-weapp@0.5.9@vant-weapp/notice-bar/index"
+  }
+}

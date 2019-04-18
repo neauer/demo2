@@ -1,0 +1,43 @@
+{
+  "pages": [
+   "pages/index/index",
+   "pages/profile/profile",
+   "pages/delive/delive"
+
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor":"#0081ff",
+    "navigationBarTitleText": "东农极速代取",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "selectedColor": "green",
+    "backgroundColor": "white",
+    "list": [{
+      "pagePath": "pages/profile/profile",
+      "text": "主页",
+      "iconPath": "imgs/profile.png",
+      "selectedIconPath": "imgs/profileSelected.png"
+    },
+    {
+      "pagePath": "pages/delive/delive",
+      "text": "发单",
+      "iconPath": "imgs/delive.png",
+      "selectedIconPath": "imgs/deliveSelected.png"
+    },
+    {
+      "pagePath": "pages/index/index",
+      "text": "我的",
+      "iconPath": "imgs/index.png",
+      "selectedIconPath": "imgs/indexSelected.png"
+    }
+    ]
+  }
+ 
+  
+
+
+}
