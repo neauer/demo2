@@ -1,0 +1,18 @@
+{
+  "pages": [
+   "pages/index/index",
+   "pages/delive/delive"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#Ff9700",
+    "navigationBarTitleText": "东农极速代取",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  }
+ 
+  
+
+
+}

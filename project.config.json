@@ -1,0 +1,47 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"": true,
+		"newFeatues6re": true,
+		"nodeModules": true
+	},
+	"appid": "wx2bbd23b18c0d725e",
+	"projectname": "zuizhong",
+	"libVersion": "2.2.5",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 1,
+			"list": [
+				{},
+				{
+					"id": -1,
+					"name": "demo1",
+					"pathName": "pages/delivery/delivery",
+					"scene": null
+				}
+			]
+		}
+	}
+}
