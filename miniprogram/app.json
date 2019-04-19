@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/indentification/indentification",
    "pages/index/index",
    "pages/profile/profile",
    "pages/delive/delive"
