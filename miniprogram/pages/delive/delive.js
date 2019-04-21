@@ -6,12 +6,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userName:'',
-    phoneNumber:'',
-    deliveId:"",
-    pay:'',
-    address:'',
-    remark:'',
+    userName: '',
+    phoneNumber: '',
+    deliveName:'',
+    deliveId: "",
+    pay: '',
+    address: '',
+    remark: '',
     price: 0
   },
   userNameChange(e) {
@@ -24,6 +25,11 @@ Page({
      phoneNumber: e.detail
     })
   },
+  deliveNameChange(e) {
+    this.setData({
+      deliveName: e.detail
+    })
+  }, 
   deliveIdChange(e) {
     this.setData({
       deliveId: e.detail
@@ -46,7 +52,7 @@ Page({
     })
   },
   onSubmit:function(){
-    if (this.data.userName.length == 0 || this.data.phoneNumber.length == 0 || this.data.deliveId.length == 0 || this.data.pay.length == 0 || this.data.address.length == 0){
+    if (this.data.userName.length == 0 || this.data.phoneNumber.length == 0 || this.data.deliveId.length == 0 || this.data.pay.length == 0 || this.data.address.length == 0 || this.data.deliveName.length == 0){
       wx.showModal({
         title: '提示',
         content: '请将内容填写完整',
@@ -70,6 +76,18 @@ Page({
           }
         }
       })
+    } else if (this.data.deliveName.length < 3){
+      wx.showModal({
+        title: '提示',
+        content: '请填入完整快递名称',
+        success: function (res) {
+          if (res.confirm) {
+            console.log('用户点击确定')
+          } else if (res.cancel) {
+            console.log('用户点击取消')
+          }
+        }
+      })
     }
     else{
       wx.showLoading({
@@ -79,6 +97,7 @@ Page({
         data: {
           userName: this.data.userName,
           phoneNumber: this.data.phoneNumber,
+          deliveName:this.data.deliveName,
           deliveId: this.data.deliveId,
           pay: this.data.pay,
           address: this.data.address,
@@ -87,6 +106,7 @@ Page({
       }).then(res => {
         wx.showToast({
           title: '提交成功',
+          duration:1000
         })
         wx.switchTab({
           url: '../profile/profile'
@@ -95,6 +115,7 @@ Page({
           userName: '',
           phoneNumber: '',
           deliveId: '',
+          deliveName:'',
           pay: '',
           address: '',
           remark: '',
@@ -104,6 +125,7 @@ Page({
       }).catch(err => {
         wx.showToast({
           title: '提交失败',
+          duration:1000
         })
         wx.hideLoading();
       })

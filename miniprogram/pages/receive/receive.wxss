@@ -1,0 +1,6 @@
+/* pages/receive/receive.wxss */
+/*每条信息样式 开始 */
+.body{
+  margin-top: 20rpx;
+}
+/*每条信息样式 结束 */

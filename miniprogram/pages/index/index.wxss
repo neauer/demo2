@@ -8,3 +8,13 @@
 .userMenu{
   margin-top: 40rpx;
 }
+.submit,.receive{
+  border-bottom: 2rpx solid rgb(236, 230, 230)
+}
+.btn{
+  width: 40rpx;
+  height: 20rpx;
+  position: absolute;
+  top: 10%;
+  right: 20%
+}

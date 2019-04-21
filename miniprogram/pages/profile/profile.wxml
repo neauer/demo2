@@ -1,16 +1,32 @@
-<view>
-<swiper 
-  circular="{{circular}}" 
-  indicator-dots="{{indicatorDots}}"
-  autoplay="{{autoplay}}"
-  interval="{{interval}}"
-  duration="{{duration}}"
->
-  <view wx:for="{{imgUrls}}" wx:key="{{index}}">
-    <swiper-item>
-      <image src="{{item}}" class="slide-image" width="355" height="150" />
-    </swiper-item>
-  </view>
+<!-- 轮播图开始 -->
+<view class='headerSwiper'>
+  <swiper 
+    indicator-dots='true'
+    indicator-color='#333' 
+    indicator-active-color='#f30' 
+    autoplay='true'
+    circular="{{circular}}" 
+    interval="{{interval}}"
+    duration="{{duration}}"
+  >
+    <view wx:for="{{imgUrls}}" wx:key="{{index}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image"  />
+      </swiper-item>
+    </view>
 
-</swiper>
+  </swiper>
 </view>
+<!-- 轮播图结束 -->
+
+<!-- 订单列表开始 -->
+  <block>
+    <view class="body">
+      <i-card title="顺丰快递" extra="代取费用：2元" thumb="../../../imgs/shunfeng.jpeg">
+        <view slot="content">送达地址：北八</view>
+         <view slot="content">备注：无</view>
+      </i-card>
+      <van-button type="info" size='small' class="btn">帮忙代取</van-button>
+    </view>
+  </block>
+<!-- 订单列表结束 -->
