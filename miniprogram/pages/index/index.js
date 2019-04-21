@@ -47,5 +47,12 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-  }
+  },
+
+  //跳转到认证页面
+    goIndentification() {
+        wx.navigateTo({
+            url: '/pages/indentification/indentification',
+        })
+    },
 })

@@ -17,6 +17,7 @@
   <i-cell title="发出的订单" is-link url=""></i-cell>
   <i-cell title="接到的订单" is-link url=""></i-cell>
   <i-cell title="联系客服" is-link url=""></i-cell>
+  <i-cell title="我的认证" is-link url="" bindtap="goIndentification"></i-cell>
 </view>
 
 </view>

@@ -1,10 +1,9 @@
 {
   "pages": [
-    "pages/indentification/indentification",
    "pages/index/index",
    "pages/profile/profile",
-   "pages/delive/delive"
-
+   "pages/delive/delive",
+   "pages/indentification/indentification"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

@@ -1,16 +1,60 @@
 
+<form>
+  <view class="cu-form-group margin-top">
+    <view class="title">姓名</view>
+    <input placeholder="你的真实姓名"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">性别</view>
+    <input placeholder="你的性别"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">身份证号</view>
+    <input type="number" placeholder="你的身份证号码"></input>
+  </view>
+    <view class="cu-form-group">
+    <view class="title">学号</view>
+    <input type="number" placeholder="你的学号"></input>
+  </view>
+    <view class="cu-form-group">
+    <view class="title">学院</view>
+    <input type="number" placeholder="你的学院"></input>
+  </view>
+    <view class="cu-form-group">
+    <view class="title">班级</view>
+    <input type="number" placeholder="你的班级"></input>
+  </view>
 
-<view class="bg-white padding">
-  <view class="cu-steps">
-    <view class="cu-item {{index>num?'':'text-blue'}}" wx:for="{{numList}}" wx:key>
-      <text class="num {{index==2?'err':''}}" data-index="{{index + 1}}"></text> {{item.name}}
+
+
+  <view class="cu-bar bg-white margin-top">
+    <view class="action">
+      学生证图片上传
+    </view>
+    <view class="action">
+      {{imgList.length}}/2
     </view>
   </view>
-</view>
+  <view class="cu-form-group">
+    <view class="grid col-4 grid-square flex-sub">
+      <view class="padding-xs bg-img" style="background-image:url({{imgList[index]}})" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+        <view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+          <text class="icon-close"></text>
+        </view>
+      </view>
+      <view class="padding-xs solids" bindtap="ChooseImage" wx:if="{{imgList.length<4}}">
+        <text class="icon-cameraadd"></text>
+      </view>
+    </view>
+  </view>
+</form>
+
 
 
 <view class="cu-bar bg-white solid-bottom margin-top">
   <view class="action">
-    <button class="cu-btn bg-green shadow" bindtap="numSteps">下一步</button>
+    <button class="cu-btn bg-green shadow" bindtap="submit">确认提交</button>
   </view>
 </view>
+
+
