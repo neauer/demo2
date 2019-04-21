@@ -32,7 +32,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 1,
 			"list": [
 				{
 					"id": -1,
@@ -42,7 +42,7 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 1,
 					"name": "profile",
 					"pathName": "pages/profile/profile",
 					"query": "",
@@ -50,8 +50,15 @@
 				},
 				{
 					"id": 2,
-					"name": "profile",
-					"pathName": "pages/index/index",
+					"name": "submit",
+					"pathName": "pages/submit/submit",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "receive",
+					"pathName": "pages/receive/receive",
 					"query": "",
 					"scene": null
 				},
@@ -59,6 +66,7 @@
 					"id": -1,
 					"name": "delive",
 					"pathName": "pages/delive/delive",
+					"query": "",
 					"scene": null
 				}
 			]

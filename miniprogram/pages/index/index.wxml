@@ -13,10 +13,9 @@
 <view class="text-center margin-top">
   <text class="text-grey text-xl">{{motto}}</text>
 </view>
-<view class="userMenu">
-  <i-cell title="发出的订单" is-link url=""></i-cell>
-  <i-cell title="接到的订单" is-link url=""></i-cell>
-  <i-cell title="联系客服" is-link url=""></i-cell>
-</view>
-
+  <view class="userMenu">
+    <i-cell title="发出的订单" is-link url="../submit/submit" i-class="submit"></i-cell>
+    <i-cell title="接到的订单" is-link url="../receive/receive" i-class="receive"></i-cell>
+    <i-cell title="问题反馈" is-link open-type="feedback"></i-cell>
+  </view>
 </view>

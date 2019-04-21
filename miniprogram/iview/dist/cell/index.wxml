@@ -7,10 +7,12 @@
         <view wx:if="{{ label }}" class="i-cell-desc">{{ label }}</view>
         <slot></slot>
     </view>
+    <button open-type="{{ openType }}" />
     <view catchtap="navigateTo" class="i-cell-ft">
         <block wx:if="{{value}}">{{ value }}</block>
         <block wx:else>
             <slot name="footer"></slot>
         </block>
     </view>
+    
 </view>

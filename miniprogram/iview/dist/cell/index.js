@@ -46,7 +46,8 @@ Component({
         url: {
             type: String,
             value: ''
-        }
+        },
+      openType: String,
     },
 
     data: {

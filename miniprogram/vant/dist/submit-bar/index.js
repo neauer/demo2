@@ -10,7 +10,7 @@ VantComponent({
     props: {
         tip: null,
         type: Number,
-        price: null,
+        price: Number,
         label: String,
         loading: Boolean,
         disabled: Boolean,
@@ -29,7 +29,7 @@ VantComponent({
             return typeof this.data.price === 'number';
         },
         priceStr() {
-            return (this.data.price / 100).toFixed(2);
+            return (this.data.price / 1).toFixed(2);
         },
         tipStr() {
             const { tip } = this.data;
