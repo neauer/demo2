@@ -1,12 +1,12 @@
 <!-- <!--pages/receive/receive -->
 <block>
-  <view class='body'>
-     <i-card title="顺丰快递" extra="代取费用：2元" thumb="../../../imgs/shunfeng.jpeg" > 
-        <view slot="content">姓名：张涛</view>
-        <view slot="content">联系方式：18712033340</view>
-        <view slot="content">取货号：123456</view>
-        <view slot="content">送达地址：北八</view>
-        <view slot="content">备注：无</view>
+  <view wx:for="{{deliveryList}}" wx:key="{{index}}" class='body'>
+     <i-card title="{{item.deliveryName}}" extra="代取费用：{{item.pay}}元" thumb="../../../imgs/shunfeng.jpeg" > 
+        <view slot="content">姓名：{{item.userName}}</view>
+        <view slot="content">联系方式：{{item.phoneNumber}}</view>
+        <view slot="content">取货号：{{item.deliveId}}</view>
+        <view slot="content">送达地址：{{item.address}}</view>
+        <view slot="content">备注：{{item.remark}}</view>
       </i-card>
   </view>
 </block>
