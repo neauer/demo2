@@ -21,13 +21,12 @@
 
 <!-- 订单列表开始 -->
   <block>
-    <view class="body">
-      <i-card title="顺丰快递" extra="代取费用：2元" thumb="../../../imgs/顺丰快递.png">
-        <view slot="content">送达地址：北八</view>
-         <view slot="content">备注：无</view>
+    <view wx:for="{{deliveryList}}" wx:key="{{index}}" class="body">
+      <i-card title="{{item.deliveryName}}" extra="代取费用：{{item.pay}}元" thumb="../../../imgs/顺丰快递.png">
+        <view wx: slot="content">送达地址：{{item.address}}</view>
+         <view slot="content">备注：{{item.remark}}</view>
       </i-card>
-      <van-button type="info" size='small' class="btn">帮忙代取</van-button>
+      <van-button bindtap='receiveAdd'  data-id='{{item._id}}'  type="info" size='small' class="btn">帮忙代取</van-button>
     </view>
   </block>
 <!-- 订单列表结束 -->
-
