@@ -1,5 +1,5 @@
 <view class="indexContainer">
-  <view class="margin-xl padding-xl bg-white radius shadow-lg">
+  <!-- <view class="margin-xl padding-xl bg-white radius shadow-lg">
   <view class="flex justify-center">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='cu-btn round bg-green shadow'>登录</button>
     <block wx:else>
@@ -12,6 +12,12 @@
 </view>
 <view class="text-center margin-top">
   <text class="text-grey text-xl">{{motto}}</text>
+</view> --> 
+<view class='index'>
+  <view class="indexImg">
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <open-data type="userNickName" class="indexName"></open-data>
 </view>
   <view class="userMenu">
     <i-cell title="发出的订单" is-link url="../submit/submit" i-class="submit"></i-cell>

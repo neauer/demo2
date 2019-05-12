@@ -61,17 +61,20 @@ Page({
         success:res=> {
           // res.data 是包含以上定义的两条记录的数组
           // console.log(Page);
-
-          this.setData({
-            deliveryList: this.data.deliveryList.concat(res.data)
-          })
-
+          if(this.data.deliveryList.length <res.data.length){
+            this.setData({
+              deliveryList: this.data.deliveryList.concat(res.data)
+            })
+          }
         }
       })
   },
 //订单列表数据库调用结束
   //添加receive数据库开始
   receiveAdd: function (e) {
+    wx.switchTab({
+      url: '../deliveDetail/deliveDetail',
+    })
     db.collection('all').where({
       _id: e.currentTarget.dataset.id,
     })
@@ -102,10 +105,6 @@ Page({
           wx.showToast({
             title: '接单成功',
           })
-          // this.setData({
-          //   counterId: '',
-          //   count: null,
-          // })
         },
         fail: err => {
           wx.showToast({
@@ -152,7 +151,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.getdeliveryList()
   },
 
   /**
