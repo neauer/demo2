@@ -12,9 +12,10 @@ Page({
     upData:[],
     openid:"",
     imgUrls: [
-      '../../imgs/001.jpg',
-      '../../imgs/002.jpg',
-      '../../imgs/003.jpg'
+      '../../imgs/1.jpg',
+      '../../imgs/2.jpg',
+      '../../imgs/3.jpg',
+      '../../imgs/4.jpg'
     ],
     indicatordots: true,
     autoplay: true  ,
