@@ -1,1 +1,10 @@
 /* pages/deliveDetail/deliveDetail.wxss */
+.body{
+  margin-top: 20rpx;
+   position: relative;
+}
+.btn{
+  position: absolute;
+  bottom: 10%;
+  right: 10%
+}
