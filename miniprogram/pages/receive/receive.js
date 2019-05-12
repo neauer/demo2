@@ -6,22 +6,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-    openid:"",
-    deliveryList: []
+    deliveList:[]
   },
-  
-  //订单列表从数据库的调用开始
-  getdeliveryList: function (e) {
+  getDeileve:function(){
     wx.cloud.callFunction({
       // 要调用的云函数名称
       name: 'login',
-      // 传递给云函数的参数
       success: res => {
-        // output: res.result === 3
-        console.log(res)
-        this.setData({
-          openid: res.result.openid
+        db.collection('receive').where({
+          _openid:res.result.openid,
         })
+          .get({
+            success:res=> {
+             this.setData({
+               deliveList:res.data
+             })
+            }
+          })
       },
       fail: err => {
         // handle error
@@ -30,29 +31,13 @@ Page({
         // ...
       }
     })
-    db.collection('receive').where({
-      _openid:this.data.openid,
-    })
-      .get({
-        success: res => {
-          // res.data 是包含以上定义的两条记录的数组
-          console.log(res.data);
-          // console.log(Page);
-
-          this.setData({
-            deliveryList: this.data.deliveryList.concat(res.data)
-          })
-          console.log(deliveryList)
-
-        }
-      })
+   
   },
-  //订单列表从数据库的调用结束
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getdeliveryList();
+    this.getDeileve();
   },
 
   /**

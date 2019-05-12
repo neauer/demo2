@@ -27,6 +27,7 @@ Page({
 
     //订单列表结束
   },
+
   onClickNav({ detail = {} }) {
     this.setData({
       mainActiveIndex: detail.index || 0
