@@ -8,7 +8,7 @@ Page({
   data: {
    myDeliveList:[]
   },
-getMydelive:function(){
+  getMyDeliveList:function(){
   wx.cloud.callFunction({
     // 要调用的云函数名称
     name: 'login',
@@ -37,7 +37,7 @@ getMydelive:function(){
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.myDeliveList();
+    this.getMyDeliveList();
   },
 
   /**

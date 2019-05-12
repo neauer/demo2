@@ -41,19 +41,6 @@ Page({
 
     circular: true,
   },
-  onClickNav({ detail = {} }) {
-    this.setData({
-      mainActiveIndex: detail.index || 0
-    });
-  },
-    circular: true ,
-
-
-  onClickItem({ detail = {} }) {
-    this.setData({
-      activeId: detail.id
-    });
-  },
   // 分类选择方法
   onClickNav({ detail = {} }) {
     this.setData({
