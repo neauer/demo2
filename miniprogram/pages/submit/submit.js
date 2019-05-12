@@ -1,65 +1,48 @@
 const db = wx.cloud.database()
 // pages/submit/submit.js
+const db = wx.cloud.database()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    //订单列表开始
-    deliveryList: [
 
-    ],
-
-
-    //订单列表结束
+   myDeliveList:[]
   },
-  //订单列表数据库调用
-  getdeliveryList: function (e) {
-    wx.cloud.callFunction({
-      // 要调用的云函数名称
-      name: 'login',
-      // 传递给云函数的参数
-      success: res => {
-        // output: res.result === 3
-        console.log(res)
-        this.setData({
-          openid: res.result.openid
-        })
-      },
-      fail: err => {
-        // handle error
-      },
-      complete: () => {
-        // ...
-      }
-    })
-    db.collection('user').where({
-      _openid: this.data.openid,
-    })
-      .get({
-        success: res => {
-          // res.data 是包含以上定义的两条记录的数组
-          console.log(res.data);
-          // console.log(Page);
-
-          this.setData({
-            deliveryList: this.data.deliveryList.concat(res.data)
-          })
-          console.log(deliveryList)
-
-        }
+//订单列表数据库调用开始
+getMydeliveList:function(){
+  wx.cloud.callFunction({
+    // 要调用的云函数名称
+    name: 'login',
+    success: res => {
+      db.collection('receive').where({
+        _openid: res.result.openid,
       })
+        .get({
+          success: res => {
+            this.setData({
+              myDeliveList: res.data
+            })
+          }
+        })
+    },
+    fail: err => {
+      // handle error
+    },
+    complete: () => {
+      // ...
+    }
+  })
 
-
-  },
+},
 //订单列表数据库调用结束
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getdeliveryList();
+    this.getMydeliveList();
   },
 
   /**

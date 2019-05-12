@@ -13,11 +13,50 @@ Page({
     pay: '',
     address: '',
     remark: '',
-    price: 0
+    price: 0,
+     array: ['顺丰快递', '京东快递', '圆通快递', '中国邮政', 'EMS', '天天快递', '德邦快递'],
+      objectArray: [
+      {
+        id: 0,
+        name: '顺丰快递'
+      },
+      {
+        id: 1,
+        name: '京东快递'
+      },
+      {
+        id: 2,
+        name: '圆通快递'
+      },
+      {
+        id: 3,
+        name: '中国邮政'
+      },
+      {
+        id: 4,
+        name: 'EMS'
+      },
+      {
+        id: 5,
+        name: '天天快递'
+      },
+      {
+        id: 6,
+        name: '德邦快递'
+      },
+    ],
+    index:''
+  },
+  delieveNameChange(e) {
+    this.setData({
+      index: e.detail.value,
+      deliveName: this.data.array[e.detail.value] 
+    })
+    console.log(this.data.deliveName)
   },
   userNameChange(e) {
     this.setData({
-      userName: e.detail 
+      userName: e.detail
     })
   },
   phoneNumberChange(e) {

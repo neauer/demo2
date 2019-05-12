@@ -7,9 +7,7 @@ Page({
    */
   data: {
     openid:"",
-    deliveryList: [
-
-    ]
+    deliveryList: []
   },
   
   //订单列表从数据库的调用开始

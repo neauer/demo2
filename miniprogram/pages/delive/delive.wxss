@@ -1,1 +1,25 @@
 /* pages/delive/delive.wxss */
+.container{
+  width: 100vw;
+  height: 44px;
+  position: relative;
+  background: #fff;
+  border-bottom: 1rpx solid rgb(248, 244, 244);
+  font-size:14px;
+}
+.container .title{
+  line-height: 44px;
+  position: absolute;
+  left: 5%;
+}
+.container .content{
+  line-height: 44px;
+  margin-right: 120rpx;
+}
+ .container .warn{
+  width: 17rpx;
+  height:17rpx;
+  position: absolute;
+  left: 1.8%;
+  top: 28%;
+}

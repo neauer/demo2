@@ -22,13 +22,17 @@ Page({
     duration: 1000,
     circular: true,
     //订单列表开始
-    deliveryList:[
-
-    ],
+    deliveryList:[],
     
 
     //订单列表结束
   },
+  onClickNav({ detail = {} }) {
+    this.setData({
+      mainActiveIndex: detail.index || 0
+    });
+  },
+    circular: true ,
   //订单列表数据库调用
   getdeliveryList:function(e){
     wx.cloud.callFunction({
@@ -63,8 +67,6 @@ Page({
 
         }
       })
-
-
   },
 //订单列表数据库调用结束
   //添加receive数据库开始
