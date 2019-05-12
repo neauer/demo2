@@ -140,7 +140,8 @@ Page({
           deliveId: this.data.deliveId,
           pay: this.data.pay,
           address: this.data.address,
-          remark: this.data.remark
+          remark: this.data.remark,
+          index: this.data.index
         }
       }).then(res=>{
         //console.log('[数据库] [新增记录] 成功，记录 _id: ', res);
@@ -159,7 +160,8 @@ Page({
           deliveId: this.data.deliveId,
           pay: this.data.pay,
           address: this.data.address,
-          remark: this.data.remark
+          remark: this.data.remark,
+          index: this.data.index
         }
       }).then(res => {
         wx.switchTab({
@@ -169,6 +171,7 @@ Page({
           userName: '',
           phoneNumber: '',
           deliveId: '',
+          index:'',
           deliveName:'',
           pay: '',
           address: '',

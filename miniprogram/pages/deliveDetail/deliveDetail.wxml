@@ -1,3 +1,4 @@
+<!--pages/deliveDetail/deliveDetail.wxml-->
 <block>
   <view wx:for="{{ deliveList}}" wx:key="{{index}}" class='body'>
     <i-card title="{{item.deliveName}}" extra="代取费用：{{item.pay}}元" thumb="../../../imgs/{{item.deliveName}}.png"> 

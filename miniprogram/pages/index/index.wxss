@@ -3,7 +3,29 @@
   width: 100vw;
   height: 100vh;
 }
+.indexImg{
+  width: 120rpx;
+  height: 120rpx;
+  overflow: hidden;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%,-70%);
+}
+.indexName{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-65%,60rpx);
+}
+.index{
+  width: 100vw;
+  height: 400rpx;
+  position: relative;
+}
 /* indexContainer css 结束 */
+
 /* index userMenu css开始 */
 .userMenu{
   margin-top: 40rpx;

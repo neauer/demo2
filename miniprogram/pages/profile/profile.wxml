@@ -22,7 +22,7 @@
 <!-- 订单列表开始 -->
   <block>
     <view wx:for="{{deliveryList}}" wx:key="{{index}}" class="body">
-      <i-card title="{{item.deliveryName}}" extra="代取费用：{{item.pay}}元" thumb="../../../imgs/顺丰快递.png">
+      <i-card title="{{item.deliveName}}" extra="代取费用：{{item.pay}}元" thumb="../../../imgs/{{item.deliveName}}.png">
         <view wx: slot="content">送达地址：{{item.address}}</view>
          <view slot="content">备注：{{item.remark}}</view>
       </i-card>

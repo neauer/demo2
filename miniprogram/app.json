@@ -4,7 +4,8 @@
     "pages/profile/profile",
     "pages/delive/delive",
     "pages/submit/submit",
-    "pages/receive/receive"
+    "pages/receive/receive",
+    "pages/deliveDetail/deliveDetail"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -22,7 +23,8 @@
         "pagePath": "pages/profile/profile",
         "text": "主页",
         "iconPath": "imgs/profile.png",
-        "selectedIconPath": "imgs/profileSelected.png"
+        "selectedIconPath": "imgs/profileSelected.png",
+        "enablePullDownRefresh": true
       },
       {
         "pagePath": "pages/delive/delive",
