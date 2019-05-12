@@ -20,14 +20,13 @@
         required
         bind:change="phoneNumberChange"
       />
-       <van-field
-        value="{{ deliveName }}"
-        type="text"
-        label="快递名称"
-        placeholder="请输入完整快递名称"
-        required
-        bind:change="deliveNameChange"
-      />
+      <view class='container'>
+        <picker bindchange="delieveNameChange" value="{{index}}" range="{{array}}">
+          <view>                                 
+            <image src='../../imgs/warn.png' class='warn'></image> <text class='title'>快递名称</text><text class='content'>{{array[index]}}</text>
+          </view>
+        </picker>
+      </view>
         <van-field
           value="{{deliveId }}"
           label="取货号"

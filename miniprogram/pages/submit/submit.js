@@ -1,18 +1,43 @@
 // pages/submit/submit.js
+const db = wx.cloud.database()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+   myDeliveList:[]
   },
+getMydelive:function(){
+  wx.cloud.callFunction({
+    // 要调用的云函数名称
+    name: 'login',
+    success: res => {
+      db.collection('receive').where({
+        _openid: res.result.openid,
+      })
+        .get({
+          success: res => {
+            this.setData({
+              myDeliveList: res.data
+            })
+          }
+        })
+    },
+    fail: err => {
+      // handle error
+    },
+    complete: () => {
+      // ...
+    }
+  })
 
+},
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.myDeliveList();
   },
 
   /**

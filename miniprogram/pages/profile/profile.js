@@ -46,7 +46,7 @@ Page({
       mainActiveIndex: detail.index || 0
     });
   },
-    circular: true 
+    circular: true ,
 
 
   onClickItem({ detail = {} }) {
