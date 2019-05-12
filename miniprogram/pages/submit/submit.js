@@ -1,3 +1,4 @@
+const db = wx.cloud.database()
 // pages/submit/submit.js
 const db = wx.cloud.database()
 Page({
@@ -6,9 +7,11 @@ Page({
    * 页面的初始数据
    */
   data: {
+
    myDeliveList:[]
   },
-getMydelive:function(){
+//订单列表数据库调用开始
+getMydeliveList:function(){
   wx.cloud.callFunction({
     // 要调用的云函数名称
     name: 'login',
@@ -33,11 +36,13 @@ getMydelive:function(){
   })
 
 },
+//订单列表数据库调用结束
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.myDeliveList();
+    this.getMydeliveList();
   },
 
   /**

@@ -131,7 +131,26 @@ Page({
     else{
       wx.showLoading({
         title: '提交中',
-      })
+      }) 
+      db.collection('all').add({
+        data: {
+          userName: this.data.userName,
+          phoneNumber: this.data.phoneNumber,
+          deliveName: this.data.deliveName,
+          deliveId: this.data.deliveId,
+          pay: this.data.pay,
+          address: this.data.address,
+          remark: this.data.remark
+        }
+      }).then(res=>{
+        //console.log('[数据库] [新增记录] 成功，记录 _id: ', res);
+      }).catch(err=>{
+        wx.showToast({
+          title: '提交失败',
+          duration: 1000
+        })
+
+      }),
       db.collection('user').add({
         data: {
           userName: this.data.userName,
@@ -143,10 +162,6 @@ Page({
           remark: this.data.remark
         }
       }).then(res => {
-        wx.showToast({
-          title: '提交成功',
-          duration:1000
-        })
         wx.switchTab({
           url: '../profile/profile'
         })
@@ -160,12 +175,14 @@ Page({
           remark: '',
           price:''
         })
+        
         wx.hideLoading();
       }).catch(err => {
         wx.showToast({
           title: '提交失败',
           duration:1000
-        })
+        }),
+        
         wx.hideLoading();
       })
  
