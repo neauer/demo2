@@ -1,5 +1,5 @@
 // pages/profile/profile.js
-
+var app = getApp()
 const db = wx.cloud.database()
 Page({
   
@@ -9,7 +9,6 @@ Page({
    */
   data: {
     myToDo:[],
-    upData:[],
     openid:"",
     imgUrls: [
       '../../imgs/1.jpg',
@@ -19,7 +18,7 @@ Page({
     ],
     indicatordots: true,
     autoplay: true  ,
-    interval: 1000,
+    interval: 2000,
     duration: 1000,
     circular: true,
     //订单列表开始
@@ -71,65 +70,17 @@ Page({
       })
   },
 //订单列表数据库调用结束
-  //添加receive数据库开始
-  receiveAdd: function (e) {
-    wx.switchTab({
-      url: '../deliveDetail/deliveDetail',
-    })
-    db.collection('all').where({
-      _id: e.currentTarget.dataset.id,
-    })
-      .get({
-        success:res=> {
-          // res.data 是包含以上定义的两条记录的数组
-          console.log(res.data)
-          this.setData({
-            myToDo: res.data
-          })
-          console.log(this.data.myToDo);
-        }
-      })
-    db.collection('receive').add({
-      data: {
-        userName: this.data.myToDo[0].userName,
-        phoneNumber: this.data.myToDo[0].phoneNumber,
-        deliveName: this.data.myToDo[0].deliveName,
-        deliveId: this.data.myToDo[0].deliveId,
-        pay: this.data.myToDo[0].pay,
-        address: this.data.myToDo[0].address,
-        remark: this.data.myToDo[0].remark
-        // upData:this.data.myToDo
-      }
-    }).then(res => {
-      db.collection('all').doc(e.target.dataset.id).remove({
-        success: res => {
-          wx.showToast({
-            title: '接单成功',
-          })
-        },
-        fail: err => {
-          wx.showToast({
-            icon: 'none',
-            title: '接单失败',
-          })
-          console.error('[数据库] [删除记录] 失败：', err)
-        }
-      })
 
-    }).catch(err => {
+//跳转详情页面开始
+jump:function(e){
+app.globalData.catch = e.target.dataset.id;
+  wx.reLaunch({
+    url: '../deliveDetail/deliveDetail'
+  });
+  console.log(app.globalData.catch)
+},
 
-      wx.showToast({
-        title: '提交失败',
-        duration: 1000
-
-    })
-    })
-  },
-
-
-//添加receive数据库结束
-
-
+//跳转详情页面结束
 
 
 

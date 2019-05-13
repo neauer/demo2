@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+      "i-card": "../../iview/dist/card/index",
+      "van-button": "../../vant/dist/button/index"
+          
+  }
 }
