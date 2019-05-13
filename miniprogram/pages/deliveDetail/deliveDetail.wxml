@@ -1,6 +1,7 @@
 <!--pages/deliveDetail/deliveDetail.wxml-->
 <block>
-  <view wx:for="{{ deliveList}}" wx:key="{{index}}" class='body'>
+
+  <view wx:for="{{myToDo}}" wx:key="{{index}}" class='body'>
     <i-card title="{{item.deliveName}}" extra="代取费用：{{item.pay}}元" thumb="../../../imgs/{{item.deliveName}}.png"> 
       <view slot="content">姓名：{{item.userName}}</view>
       <view slot="content">联系方式：{{item.phoneNumber}}</view>
@@ -8,5 +9,7 @@
       <view slot="content">送达地址：{{item.address}}</view>
       <view slot="content">备注：{{item.remark}}</view>
     </i-card>
+    <van-button bindtap='receiveAdd' data-id='{{item._id}}'  type="info" size='small' class="btn">帮忙代取</van-button>
   </view>
 </block>
+  

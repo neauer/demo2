@@ -26,7 +26,7 @@
         <view wx: slot="content">送达地址：{{item.address}}</view>
          <view slot="content">备注：{{item.remark}}</view>
       </i-card>
-      <van-button bindtap='receiveAdd'  data-id='{{item._id}}'  type="info" size='small' class="btn">帮忙代取</van-button>
+      <van-button bindtap='jump'  data-id='{{item._id}}'  type="info" size='small' class="btn">帮忙代取</van-button>
     </view>
   </block>
 <!-- 订单列表结束 -->
