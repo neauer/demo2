@@ -18,9 +18,11 @@ Page({
         })
           .get({
             success:res=> {
-             this.setData({
-               deliveList:res.data
-             })
+              if (this.data.deliveList.length<res.data.length){
+                this.setData({
+                  deliveList: this.data.deliveList.concat(res.data)
+                })
+              }
             }
           })
       },
