@@ -9,10 +9,14 @@ Page({
    myDeliveList:[]
   },
   getMyDeliveList:function(){
+    wx.showLoading({
+      title: '加载中',
+    })
   wx.cloud.callFunction({
     // 要调用的云函数名称
     name: 'login',
     success: res => {
+      wx.hideLoading();
       db.collection('user').where({
         _openid: res.result.openid,
       })

@@ -13,8 +13,7 @@ Page({
     imgUrls: [
       '../../imgs/1.jpg',
       '../../imgs/2.jpg',
-      '../../imgs/3.jpg',
-      '../../imgs/4.jpg'
+      '../../imgs/3.jpg'
     ],
     indicatordots: true,
     autoplay: true  ,
@@ -36,6 +35,10 @@ Page({
     circular: true ,
   //订单列表数据库调用
   getdeliveryList:function(e){
+    wx.showLoading({
+      title: '加载中',
+    })
+  
     wx.cloud.callFunction({
       // 要调用的云函数名称
       name: 'login',
@@ -46,6 +49,7 @@ Page({
         this.setData({
           openid:res.result.openid
         })
+        wx.hideLoading();
       },
       fail: err => {
         // handle error
@@ -74,10 +78,10 @@ Page({
 //跳转详情页面开始
 jump:function(e){
 app.globalData.catch = e.target.dataset.id;
-  wx.reLaunch({
+  wx.navigateTo({
     url: '../deliveDetail/deliveDetail'
   });
-  console.log(app.globalData.catch)
+  //console.log(app.globalData.catch)
 },
 
 //跳转详情页面结束

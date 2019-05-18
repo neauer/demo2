@@ -1,7 +1,10 @@
 {
   "usingComponents": {
-    "van-field": "../../vant/dist/field/index",
-    "van-submit-bar": "../../miniprogram_npm/vant-weapp/submit-bar/index",
-    "van-notice-bar": "../../vant/dist/notice-bar/index"
-  }
+    "van-field": "../../component/vant/dist/field/index",
+    "van-submit-bar": "../../component/vant/dist/submit-bar/index",
+    "van-notice-bar": "../../component/vant/dist/notice-bar/index"
+  },
+  "navigationBarTitleText": "填写订单"
 }
+
+  
