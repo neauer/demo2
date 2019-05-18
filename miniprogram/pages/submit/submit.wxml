@@ -1,7 +1,7 @@
 <!--pages/submit/submit.wxml 发出的订单-->
 <block>
   <view wx:for="{{ myDeliveList}}" wx:key="{{index}}" class='body'>
-    <i-card title="{{item.deliveName}}" extra="代取费用：{{item.pay}}元" thumb="../../../imgs/{{item.deliveName}}.png"> 
+    <i-card title="{{item.deliveName}}" extra="代取费用：{{item.pay}}元" thumb="../../../../imgs/{{item.deliveName}}.png"> 
       <view slot="content">姓名：{{item.userName}}</view>
       <view slot="content">联系方式：{{item.phoneNumber}}</view>
       <view slot="content">取货号：{{item.deliveId}}</view>

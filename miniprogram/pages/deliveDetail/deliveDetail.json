@@ -1,7 +1,7 @@
 {
   "usingComponents": {
-      "i-card": "../../iview/dist/card/index",
-      "van-button": "../../vant/dist/button/index"
-          
-  }
+      "i-card": "../../component/iview/dist/card/index",
+      "van-button": "../../component/vant/dist/button/index"     
+  },
+  "navigationBarTitleText": "快递详情"
 }

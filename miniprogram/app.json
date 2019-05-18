@@ -21,7 +21,7 @@
     "list": [
       {
         "pagePath": "pages/profile/profile",
-        "text": "主页",
+        "text": "快递列表",
         "iconPath": "imgs/profile.png",
         "selectedIconPath": "imgs/profileSelected.png",
         "enablePullDownRefresh": true

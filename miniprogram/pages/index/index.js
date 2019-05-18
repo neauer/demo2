@@ -11,7 +11,16 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数
-
+  submit:function(){
+    wx.navigateTo({
+      url: '../submit/submit',
+    })
+  },
+  receive: function () { 
+    wx.navigateTo({
+      url: '../receive/receive',
+    })
+  },
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({

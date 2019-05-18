@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-      "i-card": "../../iview/dist/card/index"
-  }
+      "i-card": "../../component/iview/dist/card/index"
+  },
+  "navigationBarTitleText": "发出的订单"
 }

@@ -26,19 +26,28 @@ Page({
       })
   },
   //添加receive数据库开始
-  receiveAdd: function (e) {
-   
+  receiveAdd: function (e) { 
     db.collection('all').where({
       _id: app.globalData.catch,
     })
       .get({
         success: res => {
+          // wx.showToast({
+          //   title: '接单成功',
+          // }),
+          wx.showToast({
+            title: '接单成功',
+            icon: 'success',
+            duration: 3000
+          }),
           // res.data 是包含以上定义的两条记录的数组
           console.log(res.data)
-          this.setData({
-            myToDo: res.data
-          })
-          console.log(this.data.myToDo);
+          if (this.data.myToDo.length<res.data.length){
+            this.setData({
+              myToDo: this.data.myToDo.concat(res.data)
+            })
+          }
+          //console.log(this.data.myToDo);
         }
       })
     db.collection('receive').add({
@@ -55,12 +64,9 @@ Page({
     }).then(res => {
       db.collection('all').doc(e.target.dataset.id).remove({
         success: res => {
-          wx.showToast({
-            title: '接单成功',
-          }),
-            wx.navigateTo({
-              url: '../receive/receive'
-            })
+          wx.redirectTo({
+            url: '../receive/receive',
+          })
         },
         fail: err => {
           wx.showToast({

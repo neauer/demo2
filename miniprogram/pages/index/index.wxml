@@ -1,27 +1,32 @@
 <view class="indexContainer">
-  <!-- <view class="margin-xl padding-xl bg-white radius shadow-lg">
-  <view class="flex justify-center">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='cu-btn round bg-green shadow'>登录</button>
-    <block wx:else>
-      <view class='text-center'>
-        <view class="cu-avatar xl round solids" style="background-image:url({{userInfo.avatarUrl}})"></view>
-        <view class="padding">{{userInfo.nickName}}</view>
-      </view>
-    </block>
+  <view class='index'>
+    <view class="indexImg">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <open-data type="userNickName" class="indexName"></open-data>
   </view>
-</view>
-<view class="text-center margin-top">
-  <text class="text-grey text-xl">{{motto}}</text>
-</view> --> 
-<view class='index'>
-  <view class="indexImg">
-    <open-data type="userAvatarUrl"></open-data>
-  </view>
-  <open-data type="userNickName" class="indexName"></open-data>
-</view>
-  <view class="userMenu">
-    <i-cell title="发出的订单" is-link url="../submit/submit" i-class="submit"></i-cell>
-    <i-cell title="接到的订单" is-link url="../receive/receive" i-class="receive"></i-cell>
-    <i-cell title="问题反馈" is-link open-type="feedback"></i-cell>
+  <!-- <view class="userMenu"> -->
+  <view class="body">
+    <view class='btn'>
+      <i-button bind:click="submit" type="ghost" long="true">
+        <image src='../../imgs/submit.png' class='icon'/>
+        <text class='info'>发出的订单</text>
+        <image src='../../imgs/right.png' class='arrow'></image>
+      </i-button>
+    </view>
+    <view class='btn'>
+      <i-button bind:click="receive" type="ghost" long="true">
+        <image src='../../imgs/receive.png' class='icon'/>
+        <text class='info'>接到的订单</text>
+        <image src='../../imgs/right.png' class='arrow'></image>
+      </i-button>
+    </view>
+    <view class='btn'>
+      <i-button open-type='feedback' type="ghost" long="true">
+        <image src='../../imgs/feedBack.png' class='icon'/>
+        <text class='info'>问题反馈</text>
+        <image src='../../imgs/right.png' class='arrow'></image>
+      </i-button>
+    </view>
   </view>
 </view>
